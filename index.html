@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>bliss</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img src="imagem/logo.png" alt="" />
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="menu-icon">
+                    <img src="imagem/menu.png" alt="">
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="social-icons">
+                <img src="imagem/instagram.png" alt="">
+                <img src="imagem/facebook.png" alt="">
+                <img src="imagem/twitter.png" alt="">
+                <img src="imagem/youtube.png" alt="">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="search">
+                <img src="imagem/search.png" alt="">
+            </div>
+        </div>
+        <img src="imagem/cloud.png" alt="" id="clouds">
+        <img src="imagem/plane.png" alt="" id="airplane">
+        <div id="hotairballoon">
+            <img src="imagem/balloon.png" alt="" class="balloon1">
+            <img src="imagem/balloon.png" alt="" class="balloon2">
+            <img src="imagem/balloon.png" alt="" class="balloon3">
+        </div>
+        <img src="imagem/pause.png" alt="" id="myImg">
+    </div>
+
+    <script>
+        var myImg = document.getElementById("myImg");
+        myImg.onclick = function () {
+            if (clouds.style.webkitAnimationPlayState == "paused") {
+                clouds.style.webkitAnimationPlayState = "running";
+                airplane.style.webkitAnimationPlayState = "running";
+                hotairballoon.style.webkitAnimationPlayState = "running";
+                myImg.src = 'imagem/pause.png';
+            } else {
+                clouds.style.webkitAnimationPlayState = "paused";
+                airplane.style.webkitAnimationPlayState = "paused";
+                hotairballoon.style.webkitAnimationPlayState = "paused";
+                myImg.src = 'imagem/play.png';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
